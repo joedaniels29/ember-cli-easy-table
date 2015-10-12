@@ -1,0 +1,19 @@
+<ul>
+    {{#if (is-not (eq-eq 1 attrs.page))}}
+        <li class="page-prev">
+            <a {{action attrs.setPage (minus-minus attrs.page 1)}}>Prev</a>
+        </li>
+    {{/if}}
+    <li>
+        <ul>
+            {{#each (inclusive-range 1 attrs.pages) as |index|}}
+                {{table/pagination-page selected=(eq-eq attrs.page index) model=index action=(action attrs.setPage index)}}
+            {{/each}}
+        </ul>
+    </li>
+    {{#if (is-not (eq-eq attrs.pages attrs.page))}}
+        <li class="page-next">
+            <a {{action attrs.setPage (plus-plus attrs.page 1)}}>Next</a>
+        </li>
+    {{/if}}
+</ul>

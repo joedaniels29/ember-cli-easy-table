@@ -1,0 +1,8 @@
+<table>{{yield this}}</table>
+{{#if (and-and pagination showPageNumbers) }}
+    {{table/pagination-list
+    currentSelected=displayDelegate.page
+    page=displayDelegate.page
+    pages=displayDelegate.pages
+    setPage=(action (mut displayDelegate.page))}}
+{{/if}}
