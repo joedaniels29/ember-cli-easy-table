@@ -1,3 +1,16 @@
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">Welcome to ember-cli-easy-table</h2>
 
-{{outlet}}
+
+{{#table/j-table model=model as |t|}}
+    <tr>
+        <th>MRN</th>
+
+        <th></th>
+    </tr>
+    {{#table/j-table-page table=t as |t m|}}
+        {{#table/j-table-row model=m table=t selected=(eq-eq m.id selected.id) action=(action attrs.studySelected m) as |t tr m|}}
+            <td>{{m.mrn}}</td>
+
+        {{/table/j-table-row}}
+    {{/table/j-table-page}}
+{{/table/j-table}}

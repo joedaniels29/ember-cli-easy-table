@@ -1,19 +1,14 @@
-# ember-cli-animatecss
+# ember-cli-easy-table
 
-Include animate.css in an ember-cli app.
-
-When the addon is installed, it will add animate.css `latest` as
-a bower dependency.
 
 ## Dependencies
 
-There ought not be any Dependencies. This addon does not utilize sass.
-
+This one should just work!
 
 ## Usage
 Just install with
 
-    ember install ember-cli-animatecss
+    ember install ember-cli-easy-table
 
 ## Developing this Addon
 
